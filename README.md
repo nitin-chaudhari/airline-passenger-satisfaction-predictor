@@ -14,8 +14,8 @@
 </ul>
 
 <h2>Demo</h2>
-<img src="/images/img1.jpg">
-<img src="/images/img2.jpg">
+<img src="/images/img1.png">
+<img src="/images/img2.png">
 
 <b>BUSINESS PROBLEM GOALS</b>
 1. Business Problem Understanding:
