@@ -14,8 +14,8 @@
 </ul>
 
 <h2>Demo</h2>
-![Home Page](/images/img1.jpg)
-![Prediction Page](/images/img2.jpg)
+<img src="/images/img1.jpg">
+<img src="/images/img2.jpg">
 
 <b>BUSINESS PROBLEM GOALS</b>
 1. Business Problem Understanding:
