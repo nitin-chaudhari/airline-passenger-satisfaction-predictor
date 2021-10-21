@@ -1,0 +1,23 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/predict.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;700&display=swap" rel="stylesheet">
+    <title>Prediction</title>
+</head>
+<body>
+    <header>
+        <h1>Airline Passenger Satisfaction Predictor</h1>
+    </header>
+    <div class="predict_container">
+        <h1 class="result">{{ predict }}</h1>
+        <form class="predict_form" action="/" method="GET">
+            <input class="back" type="submit" value="Back">
+        </form>
+    </div>
+</body>
+</html>

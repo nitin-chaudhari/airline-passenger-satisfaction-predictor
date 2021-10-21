@@ -1,0 +1,176 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;700&display=swap" rel="stylesheet">
+    <title>Airline Passenger Satisfaction Predictor</title>
+</head>
+<body>
+  <header>
+    <h1>Airline Passenger Satisfaction Predictor</h1>
+  </header>
+  <div class="container">
+
+    <form method="POST" action="/predict">
+        <input class="input_tag" type="text" name="fullName" placeholder="Full Name" required>
+        <select class="select" id="gender" name="gender" required>
+            <option value="" selected>Gender</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+        </select>
+        <select class="select" id="cust-type" name="cust-type" required>
+            <option value="" selected>Customer Type</option>
+            <option value="Loyal Customer">Loyal Customer</option>
+            <option value="disloyal Customer">Disloyal Customer</option>
+        </select>
+        <input class="input_tag" type="number" name="age" placeholder="Your Age" required>
+        <select class="select" id="travel-type" name="travel-type" required>
+            <option value="" selected>Travel Type</option>
+            <option value="Personal Travel">Personal Travel</option>
+            <option value="Business travel">Business Travel</option>
+        </select>
+        <select class="select" id="cust-class" name="cust-class" required>
+            <option value="" selected>Customer Class</option>
+            <option value="Business">Business</option>
+            <option value="Eco">Eco</option>
+            <option value="Eco Plus">Eco Plus</option>
+        </select>
+        <input class="input_tag" type="text" name="source" placeholder="Source City" required>
+        <input class="input_tag" type="text" name="destination" placeholder="Destination City" required>
+        <select class="select" id="wifi-service" name="wifi-service" required>
+            <option value="" selected>Rate For Wifi Service</option>
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+        </select>
+        <select class="select" id="datc" name="datc" required>
+          <option value="" selected>Rate For Departure Arrival Time Convinient</option>
+          <option value="0">0</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+        </select>
+        <select class="select" id="eoob" name="eoob" required>
+          <option value="" selected>Rate For Ease Of Online Booking</option>
+          <option value="0">0</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+        </select>
+        <select class="select" id="gate-loc" name="gate-loc" required>
+          <option value="" selected>Rate For Gate Location</option>
+          <option value="0">0</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+        </select>
+        <select class="select" id="food_drink" name="food_drink" required>
+          <option value="" selected>Rate For Food and Drink Service</option>
+          <option value="0">0</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+        </select>
+        <select class="select" id="online_boarding" name="online_boarding" required>
+          <option value="" selected>Rate For Online Boarding</option>
+          <option value="0">0</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+        </select>
+        <select class="select" id="seat_comfort" name="seat_comfort" required>
+          <option value="" selected>Rate For Seat Comfort In Flight</option>
+          <option value="0">0</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+        </select>
+        <select class="select" id="inflight_entertainment" name="inflight_entertainment" required>
+          <option value="" selected>Rate For Inflight Entertainment</option>
+          <option value="0">0</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+        </select>
+        <select class="select" id="onboard_service" name="onboard_service" required>
+          <option value="" selected>Rate For Onboard Service</option>
+          <option value="0">0</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+        </select>
+        <select class="select" id="leg_room_service" name="leg_room_service" required>
+          <option value="" selected>Rate For Leg Room Service</option>
+          <option value="0">0</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+        </select>
+        <select class="select" id="baggage_handling" name="baggage_handling" required>
+          <option value="" selected>Rate For Baggage Handling</option>
+          <option value="0">0</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+        </select>
+        <select class="select" id="checkin_service" name="checkin_service" required>
+          <option value="" selected>Rate For Checkin Service</option>
+          <option value="0">0</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+        </select>
+        <select class="select" id="inflight_service" name="inflight_service" required> 
+          <option value="" selected>Rate For Inflight Service</option>
+          <option value="0">0</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+        </select>
+        <select class="select" id="cleanliness" name="cleanliness" required>
+          <option value="" selected>Rate For Cleanliness Inside</option>
+          <option value="0">0</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+        </select>
+        <input class="input_tag right" type="text" name="departure_delay_in_minutes" placeholder="Departure Delay In Minutes" required>
+        <input class="input_tag right" type="text" name="arrival_delay_in_minutes" placeholder="Arrival Delay In Minutes" required> 
+        <input type="submit" name="submit-btn" id="predict_btn" value="Predict Customer Satisfaction">
+    </form>
+  </div>
+</body>
+</html>

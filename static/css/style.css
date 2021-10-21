@@ -1,0 +1,245 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    width: 100%;
+    height: 1200px;
+    background-image: url(../images/background.jpg);
+    background-size: cover;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+/* Home Page Start */
+
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 60px;
+    color: #053b33;
+    /* background-color: #b9d3e7; */
+    margin-bottom: 30px;
+}
+
+header h1{
+    font-size: 40px;
+}
+
+.container{
+    /* display: flex; */
+    margin-top: 200px;
+    height: 1000px;
+    width: 900px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    align-items: center;
+    justify-content: center;
+
+}
+
+form{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    margin-left: 50px;
+    margin-right: 50px;
+    margin: 10px;
+    width: 700px;
+    color: black;
+}
+
+form .select option:first-child{
+    color: black;
+    background-color: white;
+    height: 20px;
+}
+
+.select{
+    display: inline;
+    margin-left: 20px;
+    margin-right: 20px;
+    height: 40px;
+    width: 300px;
+    border-radius: 5px;
+    outline: none;
+    margin-top: 20px;
+    color: gray;
+    /* background-color: white; */
+
+
+
+}
+
+#cust-type{
+    display: inline;
+    margin-right: 20px;
+    height: 40px;
+    width: 300px;
+    border-radius: 5px;
+    outline: none;
+
+}
+
+#travel-type{
+    display: inline;
+    margin-left: 20px;
+    height: 40px;
+    width: 300px;
+    border-radius: 5px;
+    outline: none;
+
+}
+
+#cust-class{
+    display: inline;
+    margin-right: 20px;
+    height: 40px;
+    width: 300px;
+    border-radius: 5px;
+    outline: none;
+
+}
+
+form .input_tag{
+    display: block;
+    margin-left: 20px;
+    width: 640px;
+    height: 20px;
+    padding: 20px;
+    outline: none;
+    /* background-color: white; */
+    border-radius: 5px;
+    border: 1px solid gray;
+    outline: none;
+    margin-top: 20px;
+    color: black;
+
+}
+
+#predict_btn{
+    height: 40px;
+    width: 640px;
+    margin-top: 10px;
+    margin-left: 20px;
+    color: whitesmoke;
+    background-color: #61b3f2;
+    border-radius: 5px;
+    font-size: 15px;
+    border: none;
+    
+    
+
+}
+
+#predict_btn:hover{
+    background-color: #4ef048;
+}
+
+/* Home Page End */
+
+
+
+
+/* Media Queries */
+/* for mobile phone screen */
+
+@media screen and (max-width: 480px) {
+    body{
+        width: 100%;
+        height: auto;
+        display: inline-block;
+        background-image: url(../images/background.jpg);
+        background-repeat: cover;
+        background-size: 480px 1340px;
+        font-family: 'Noto Sans JP', sans-serif;
+    }
+
+    body header{
+        width: 480px;
+        height: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    body header h1{
+        font-size: 19px;
+    }
+
+    .container{
+        margin-top: 360px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        width: 460px;
+        margin-left: 40px;
+        margin-right: 10px;
+        height: auto;
+        display: block;
+
+    }
+
+    .container form{
+        display: block;
+        width: 480px;
+        height: auto;
+        padding-left: auto;
+        padding-left: auto;
+    }
+
+    form .input_tag{
+        margin-left: auto;
+        margin-right: auto;
+        display: inline-flex;
+        margin-top: 10px;
+        width: 380px;
+        height: 40px;
+    }
+
+    form .select{
+        margin-left: auto;
+        margin-right: auto;
+        display: inline-flex;
+        margin-top: 10px;
+        width: 380px;
+        height: 40px;
+    }
+
+    form #travel-type{
+        width: 380px;
+        margin-left: auto;
+
+    }
+
+    form #cust-class{
+        width: 380px;
+
+    }
+
+    form #cust-type{
+        width: 380px;
+    }
+
+    form #predict_btn{
+        margin-left: 0;
+        margin-right: 20px;
+        display: block;
+        margin-top: 10px;
+        width: 380px;
+        height: 40px;
+        margin-bottom: 20px;
+    }
+
+
+}
+
